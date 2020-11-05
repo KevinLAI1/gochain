@@ -1,0 +1,17 @@
+version : '3.6'
+
+services:
+ db:
+   image: postgres
+   restart: always
+   environment:
+     POSTGRES_PASSWORD: 1234
+ app:
+   image : img1:1.0
+   environment:
+     IP: 127.0.0.1
+     PORT: 8000
+     POSTGRES_URL: db
+     POSTGRES_PASSWORD: 1234
+     
+     
